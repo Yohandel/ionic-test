@@ -1,20 +1,85 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="false">    
+      <ion-toolbar color="dark">
+        <ion-avatar id="popover-button" color="dark" slot="end">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-searchbar color="dark">
+          <ion-icon id="open-modal" color="light" name="filter-outline"></ion-icon>
+        </ion-searchbar>
+      </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" class="ion-padding" color="dark">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    
+    <ion-card color="light"  [routerLink]="['/details-page']">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title class="ion-justify-content-center">Hotel</ion-card-title>
+        <ion-card-subtitle class="ion-justify-content-center">Trivago</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+        de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="light" [routerLink]="['/details-page']">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title class="ion-justify-content-center">Hotel</ion-card-title>
+        <ion-card-subtitle class="ion-justify-content-center">Trivago</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+        de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+      </ion-card-content>
+    </ion-card>
   </div>
+
+  <ion-modal  trigger="open-modal" mode="ios" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Seleccione Un Filtro</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="dark">
+        <ion-list lines="full" color="dark">
+          <ion-item color="dark" button detail>
+            <ion-label>Precio</ion-label>
+          </ion-item>
+          <ion-item color="dark" button detail>
+            <ion-label>Ciudad</ion-label>
+          </ion-item>
+          <ion-item color="dark" button detail>
+            <ion-label>Número de Paradas</ion-label>
+          </ion-item>
+          <ion-item color="dark" button detail>
+            <ion-label>Una vaiana</ion-label>
+          </ion-item>
+          <ion-item color="dark" button detail>
+            <ion-label>Otra Vaina</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
+<ion-popover trigger="popover-button">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">Configurar Usuario</ion-item>
+        <ion-item [button]="true" [detail]="false">Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>

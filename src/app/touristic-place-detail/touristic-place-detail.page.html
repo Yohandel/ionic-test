@@ -1,0 +1,39 @@
+
+
+<ion-content>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/details-page"></ion-back-button>
+    </ion-buttons>
+    <ion-avatar id="popover-places" slot="end">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+  </ion-toolbar>
+  <ion-img src="https://docs-demo.ionic.io/assets/madison.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+
+    <ion-item >
+      <ion-label>Precio</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-label>Ciudad</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-label>Número de Paradas</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-label>Una vaiana</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-label>Otra Vaina</ion-label>
+    </ion-item>
+</ion-content>
+<ion-popover trigger="popover-places">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">Configurar Usuario</ion-item>
+        <ion-item [button]="true" [detail]="false">Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>

@@ -1,0 +1,122 @@
+<ion-header [translucent]="false">    
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-avatar id="popover-detail" slot="end">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="dark">
+<div id="container">
+  <ion-range mode="ios" (ionChange)="onIonChange($event)" [ticks]="true" [snaps]="true" [min]="0" [max]="5"></ion-range>
+  {{lastEmittedValue}}
+<ion-card color="light" [routerLink]="['/touristic-place-detail']">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Hotel</ion-card-title>
+    <ion-card-subtitle>Trivago</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+    de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+  </ion-card-content>
+</ion-card>
+<ion-card color="light" [routerLink]="['/touristic-place-detail']">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Hotel</ion-card-title>
+    <ion-card-subtitle>Trivago</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+    de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+  </ion-card-content>
+</ion-card>
+<ion-card color="light" [routerLink]="['/touristic-place-detail']">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Hotel</ion-card-title>
+    <ion-card-subtitle>Trivago</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+    de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+  </ion-card-content>
+</ion-card>
+<ion-card color="light" [routerLink]="['/touristic-place-detail']">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Hotel</ion-card-title>
+    <ion-card-subtitle>Trivago</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+    de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+  </ion-card-content>
+</ion-card>
+<ion-card color="light" [routerLink]="['/touristic-place-detail']">
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Hotel</ion-card-title>
+    <ion-card-subtitle>Trivago</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Trivago te ayuda a comparar la cantidad de precios de más de 700.00 hoteles, en más de 175 páginas web, en vez
+    de perder tiempo y dinero, Trivago te lo hace fácil para que puedas encontrar tu hotel ideal... trivago.com ¿Hotel? Trivago
+  </ion-card-content>
+</ion-card>
+</div>
+
+<ion-modal trigger="open-modal" mode="ios" (willDismiss)="onWillDismiss($event)">
+<ng-template>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="cancel()">Cancel</ion-button>
+      </ion-buttons>
+      <ion-title>Seleccione Un Filtro</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content >
+    <ion-list lines="full">
+      <ion-item button detail>
+        <ion-label>Precio</ion-label>
+      </ion-item>
+      <ion-item ion-item button detail>
+        <ion-label>Ciudad</ion-label>
+      </ion-item>
+      <ion-item ion-item button detail>
+        <ion-label>Número de Paradas</ion-label>
+      </ion-item>
+      <ion-item ion-item button detail>
+        <ion-label>Una vaiana</ion-label>
+      </ion-item>
+      <ion-item ion-item button detail>
+        <ion-label>Otra Vaina</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ng-template>
+</ion-modal>
+</ion-content>
+<ion-popover trigger="popover-detail">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">Configurar Usuario</ion-item>
+        <ion-item [button]="true" [detail]="false">Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
